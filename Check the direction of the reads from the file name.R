@@ -1,10 +1,10 @@
 #Library stingr to use functin str_detect
 library(stringr)
-sri<-data.frame(read.delim("sing10st.txt"))
+File_names<-data.frame(read.delim("file_name.txt"))
 Xlist = list()
 #for loop to check the direction of the reads in the fastq files from their names
-for(f in 1:nrow(sri)) {
-  g = sri[f, 1]
+for(f in 1:nrow(File_names)) {
+  g = File_names[f, 1]
   if(str_detect(g, "_1") == TRUE) {
     print("forward")
     Xlist = append(Xlist, 'forward')
