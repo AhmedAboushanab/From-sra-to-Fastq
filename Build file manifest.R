@@ -1,6 +1,6 @@
 #Set up directory 
 Direction <- read.delim('Direction', header = F)
-File_names <-read.delim('sing10st.txt', header = F)
+File_names <-read.delim('sample-ids.txt', header = F)
 paths <- read.delim('listOfFiles.list', header = F)
 #Combine all the files into one file
 total <- data.frame(File_names, paths, Direction)
