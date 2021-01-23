@@ -14,3 +14,6 @@ File <- read.csv("file_manifest.csv", header = F)
 colnames(File) <- c("sample-id", 'Absolute-filepath', 'direction')
 #build a csv file with column names
 write.csv(File, file = 'file_manifest2.csv', row.names = F)
+#Remove the headless csv file
+cmd <-paste('rm file_manifest.csv')
+system(cmd)
